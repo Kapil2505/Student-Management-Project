@@ -23,9 +23,7 @@ This project is a Spring Boot application that provides a REST API to manage stu
 8.Swagger Documentation
 
 4.Setup Instructions:
-
 Prerequisites:
-
 Ensure you have the following installed:
 1.JDK 19 or later
 2.Maven
@@ -34,7 +32,6 @@ Ensure you have the following installed:
 5.Clone the Repository : https://github.com/Kapil2505/Student-Management-Project.git
 
 6.Configure the Application
-
 Update src/main/resources/application.properties if needed. For example, to change the server port or database configurations.
 server.port=8080
 spring.h2.console.enabled=true
@@ -49,7 +46,6 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 7.Run the Application
 
 8.Access the Application:
-
 The application will be available at http://localhost:8080.
 Access the H2 database console at http://localhost:8080/h2-console.
 JDBC URL: jdbc:h2:mem:testdb
@@ -61,15 +57,19 @@ Password: (leave it blank)
 
 1.Authentication:
 POST /Registration: http://localhost:8080/authApi/SignUp
+
 POST/Authentication: http://localhost:8080/authApi/SignIn
 
 2.Students:
 POST /api/students: http://localhost:8080/api/student/saveStudent
+
 GET /api/students: http://localhost:8080/api/student/getStudentById/{studentId}
+
 GET /api/students/{studentId}/enroll: http://localhost:8080/api/student/getAllDetails
 
 3.Subjects:
 POST /api/subjects: http://localhost:8080/api/subject/saveSubject
+
 GET /api/subjects: http://localhost:8080/api/subject/getAllDetails
 
 
@@ -80,11 +80,9 @@ ROLE_ADMIN
 
 
 11.JWT:
-
 Add the JWT token in the Authorization header as Bearer <token> for authenticated requests.
 
 12.Swagger Documentation:
-
 http://localhost:8080/swagger-ui/index.html  using this url you can see the Api documentation.
 
 13.Use postman or swagger ui to test APIs.
